@@ -4,6 +4,21 @@
   box-sizing: border-box;
 }
 
+body h1 {
+  text-align: center;
+  color: blueviolet;
+  padding: 30PX;
+}
+body #divBut {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #divBut #but {
+  padding: 30px;
+  font-size: 3.5rem;
+}
 body #container {
   width: 600px;
   height: 400px;
@@ -11,6 +26,7 @@ body #container {
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
   background-color: #e5e3e3;
 }
 body #container #divTitle {

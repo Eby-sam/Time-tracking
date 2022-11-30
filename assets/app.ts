@@ -1,9 +1,8 @@
 import './styles/styles.scss';
 
-let monString: string = 'string';
-let monNombre: number = 54674543;
 
-console.log(monNombre);
-console.log(monString);
+let but = document.getElementById('but') as HTMLElement;
 
-let result: number = monNombre + parseInt(monString);
+but.addEventListener("click", function() {
+
+})
