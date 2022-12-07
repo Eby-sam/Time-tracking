@@ -4,7 +4,7 @@ let days = document.getElementById('days') as HTMLElement;
 let containerTop = document.getElementById('containerTop') as HTMLElement;
 
 function creatProject() {
-    containerTop.innerHTML = `<div class="container">
+    containerTop.innerHTML += `<div class="container">
                         <div class="divTitle">
                             <h2>Default Project</h2>
                         </div>
@@ -20,7 +20,9 @@ function creatProject() {
                                 </div>
                             </div>
                             <div class="taches">
-        
+                                <div class="detailTache">
+                                
+                                </div>
                             </div>
                         </div>
                         <div class="barre">
