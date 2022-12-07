@@ -5,7 +5,7 @@ const development = {
     module: {
         rules: [
             {
-                test: /\.css$/i,
+                test: /\.s?css$/i,
                 use: ['style-loader',
                     {
                         loader: 'css-loader',
