@@ -2,10 +2,12 @@ let but = document.getElementById('but') as HTMLElement;
 let hour = document.getElementById('hours') as HTMLElement;
 let days = document.getElementById('days') as HTMLElement;
 let containerTop = document.getElementById('containerTop') as HTMLElement;
+let resultId = 1;
+resultId++;
 
 function creatProject() {
     containerTop.innerHTML += `<div class="container">
-                        <div class="divTitle">
+                        <div id="${resultId}">
                             <h2>Default Project</h2>
                         </div>
                         <div class="containerBlock">
