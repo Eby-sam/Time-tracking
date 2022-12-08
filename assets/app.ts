@@ -3,11 +3,17 @@ let hour = document.getElementById('hours') as HTMLElement;
 let days = document.getElementById('days') as HTMLElement;
 let containerTop = document.getElementById('containerTop') as HTMLElement;
 let resultId = 1;
-resultId++;
+let newId = 50;
+let containerId = 100;
 
+resultId++;
+newId++;
+containerId++;
+
+// creation d'un projet -------------------------------------
 function creatProject() {
     containerTop.innerHTML += `<div class="container">
-                        <div id="${resultId}">
+                        <div class="divTitle" id="${resultId}">
                             <h2>Default Project</h2>
                         </div>
                         <div class="containerBlock">
@@ -22,7 +28,7 @@ function creatProject() {
                                 </div>
                             </div>
                             <div class="taches">
-                                <div class="detailTache">
+                                <div class="detailTache" id="${containerId}">
                                 
                                 </div>
                             </div>
@@ -34,9 +40,42 @@ function creatProject() {
                             <div class="look">
                                 <i class="fa-solid fa-eye"></i>
                             </div>
-                            <div class="new">+ Ajouter une tâche</div>
+                            <button class="new" id="${newId}">+ Ajouter une tâche</button>
                         </div>
                     </div>`;
+
+
+    // creation d'une tache -----------------------
+
+    console.log("creat ok");
+
+    if(document.getElementsByClassName("new") &&
+        document.getElementsByClassName("detailTache")) {
+
+        console.log("verif 2 class ok");
+        let news = document.getElementById('newId') as HTMLElement;
+        console.log(news as HTMLElement);
+        let containerTache = document.getElementById("containerId") as HTMLElement;
+        function creatTache() {
+
+            containerTache.innerHTML += `<div class="containTache">
+                            <div>
+                               hello world
+                            </div>
+                            <div></div>
+                         </div>`
+        }
+
+        if(news) {
+            news.addEventListener('click', creatTache);
+            console.log('verif news ok');
+        }
+    }
+
 }
 
 but.addEventListener('click', creatProject);
+
+
+
+
