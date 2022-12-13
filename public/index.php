@@ -49,6 +49,7 @@
             </div>
         </div>
     </template>
+
     <template id="tmpl2">
         <div class="containTache">
             <p>hello new tache</p>

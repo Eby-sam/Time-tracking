@@ -11,30 +11,21 @@ var containTache = document.getElementsByClassName('containTache');
 var addBut = document.getElementById('buttonAdd');
 var containerCreat = document.getElementsByClassName('container');
 var del = document.getElementById('del');
+var container = document.getElementsByClassName('container');
 var resultId = 1;
-var newId = 50;
-var containerId = 100;
-newId++;
-containerId++;
 // creation d'un projet ---------------------------------------------------------------
 function creatProject() {
     for (var i = 0; i < 1; i++) {
+        container.id = resultId++;
         containerTop.append(tmpl.content.cloneNode(true));
     }
     // creation d'une tache ----------------------------------------------------------------
-    if ('container' in document.createElement('template')) {
-        function creatTache() {
-            detailTache.append(tmpl2.containtTache.cloneNode(true));
+    function creatTache() {
+        for (var i = 0; i < 1; i++) {
+            console.log(creatTache);
+            detailTache.append(tmpl2.content.cloneNode(true));
         }
-        addBut.addEventListener('click', creatTache);
     }
-    else {
-        // null
-    }
-    function removeProject() {
-        containerCreat.remove();
-        console.log(removeProject);
-    }
-    del.addEventListener('click', removeProject);
+    addBut.addEventListener('click', creatTache);
 }
 but.addEventListener('click', creatProject);
