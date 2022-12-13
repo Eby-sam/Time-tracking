@@ -2,30 +2,39 @@ var but = document.getElementById('but');
 var hour = document.getElementById('hours');
 var days = document.getElementById('days');
 var containerTop = document.getElementById('containerTop');
+var tmpl = document.getElementById('tmpl');
+var tmpl2 = document.getElementById('tmpl2');
+var divTitle = document.getElementsByClassName('divTitle');
+var detailTache = document.getElementsByClassName('detailTache');
+var news = document.getElementsByClassName('new');
+var containTache = document.getElementsByClassName('containTache');
+var addBut = document.getElementById('buttonAdd');
+var containerCreat = document.getElementsByClassName('container');
+var del = document.getElementById('del');
 var resultId = 1;
 var newId = 50;
 var containerId = 100;
-resultId++;
 newId++;
 containerId++;
-// creation d'un projet -------------------------------------
+// creation d'un projet ---------------------------------------------------------------
 function creatProject() {
-    containerTop.innerHTML += "<div class=\"container\">\n                        <div class=\"divTitle\" id=\"".concat(resultId, "\">\n                            <h2>Default Project</h2>\n                        </div>\n                        <div class=\"containerBlock\">\n                            <div class=\"time\">\n                                <div class=\"oclock\">\n                                    <i class=\"fa-regular fa-clock\"></i>\n                                    <p><span class=\"hours\">0</span> h</p>\n                                </div>\n                                <div class=\"dates\">\n                                    <i class=\"fa-solid fa-calendar-days\"></i>\n                                    <p>Il y a <span class=\"days\">0</span> jours</p>\n                                </div>\n                            </div>\n                            <div class=\"taches\">\n                                <div class=\"detailTache\" id=\"").concat(containerId, "\">\n                                \n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"barre\">\n                            <div class=\"corbeil\">\n                                <i class=\"fa-solid fa-trash\"></i>\n                            </div>\n                            <div class=\"look\">\n                                <i class=\"fa-solid fa-eye\"></i>\n                            </div>\n                            <button class=\"new\" id=\"").concat(newId, "\">+ Ajouter une t\u00E2che</button>\n                        </div>\n                    </div>");
-    // creation d'une tache -----------------------
-    console.log("creat ok");
-    if (document.getElementsByClassName("new") &&
-        document.getElementsByClassName("detailTache")) {
-        console.log("verif 2 class ok");
-        var news = document.getElementById('newId');
-        console.log(news);
-        var containerTache_1 = document.getElementById("containerId");
-        function creatTache() {
-            containerTache_1.innerHTML += "<div class=\"containTache\">\n                            <div>\n                               hello world\n                            </div>\n                            <div></div>\n                         </div>";
-        }
-        if (news) {
-            news.addEventListener('click', creatTache);
-            console.log('verif news ok');
-        }
+    for (var i = 0; i < 1; i++) {
+        containerTop.append(tmpl.content.cloneNode(true));
     }
+    // creation d'une tache ----------------------------------------------------------------
+    if ('container' in document.createElement('template')) {
+        function creatTache() {
+            detailTache.append(tmpl2.containtTache.cloneNode(true));
+        }
+        addBut.addEventListener('click', creatTache);
+    }
+    else {
+        // null
+    }
+    function removeProject() {
+        containerCreat.remove();
+        console.log(removeProject);
+    }
+    del.addEventListener('click', removeProject);
 }
 but.addEventListener('click', creatProject);
