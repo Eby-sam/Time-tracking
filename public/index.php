@@ -45,7 +45,7 @@
                 <div class="look">
                     <i class="fa-solid fa-eye"></i>
                 </div>
-                <button class="new" id="buttonAdd">+ Ajouter une tâche</button>
+                <button class="new">+ Ajouter une tâche</button>
             </div>
         </div>
     </template>
@@ -56,7 +56,7 @@
         </div>
     </template>
 
-    <script src="../assets/app.js"></script>
+    <script src="build/js/front-bundle.js"></script>
     <script src="https://kit.fontawesome.com/60b2d3991b.js" crossorigin="anonymous"></script>
 </body>
 </html>
