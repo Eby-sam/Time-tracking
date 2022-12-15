@@ -6,18 +6,19 @@ const production = {
     module: {
         rules: [
             {
-                test: /\.css$/i,
+                test: /\.s?css$/i,
                 use: [
                     {
-                        loader: MiniCssExtractPlugin.loader,
+                        loader:MiniCssExtractPlugin.loader,
                     },
                     {
                         loader: 'css-loader',
                         options: {
                             import: true,
-                            sourceMap: true,
+                            sourceMap: false,
                         }
                     },
+                    'sass-loader',
                 ],
             },
             {
@@ -52,5 +53,6 @@ const production = {
         })
     ]
 }
+
 
 module.exports = production;

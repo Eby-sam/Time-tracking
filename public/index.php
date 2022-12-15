@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Time Tracking</title>
-    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <h1>Apply Time Tracking</h1>

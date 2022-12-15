@@ -9,9 +9,9 @@
     "watch": "webpack --watch --mode=development",
     "watch:prod": "webpack --watch --mode=production",
     "start": "webpack serve --mode development",
-    "sass:dev": "sass assets/sass:public/assets/css",
-    "sas:prod": "sass --no-source-map assets/sass:public/assets/css",
-    "sass:watch": "sass --watch assets/sass:public/assets/css"
+    "sass:dev": "sass assets/sass:public/style",
+    "sas:prod": "sass --no-source-map assets/sass:public/style",
+    "sass:watch": "sass --watch assets/sass:public/style"
   },
   "keywords": [],
   "author": "",

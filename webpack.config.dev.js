@@ -6,14 +6,16 @@ const development = {
         rules: [
             {
                 test: /\.s?css$/i,
-                use: ['style-loader',
+                use: [
+                    'style-loader',
                     {
-                        loader: 'css-loader',
+                        loader: 'style-loader',
                         options: {
                             import: true,
-                            sourceMap: true,
+                            sourceMap: false,
                         }
                     },
+                    'sass-loader',
                 ],
             },
             {
