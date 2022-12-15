@@ -6,13 +6,10 @@ let tmpl = document.getElementById('tmpl') as HTMLElement;
 let tmpl2 = document.getElementById('tmpl2') as HTMLElement;
 let divTitle = document.getElementsByClassName('divTitle') as HTMLCollection;
 let detailTache = document.getElementsByClassName('detailTache') as HTMLCollection;
-let news = document.getElementsByClassName('new') as HTMLCollection;
 let containTache = document.getElementsByClassName('containTache') as HTMLCollection;
 let addBut = document.getElementsByClassName('new') as HTMLCollection;
-let containerCreat = document.getElementsByClassName('container') as HTMLCollection;
 let del = document.getElementById('del') as HTMLElement;
 let container = document.getElementsByClassName('container') as HTMLCollection;
-let resultId = 1;
 
 
 // creation d'un projet ---------------------------------------------------------------
@@ -24,36 +21,44 @@ function creatProject(this: any, ) {
         projects.forEach((projet) => {
             projet.id = 'container' + currentProjet.toString();
             currentProjet++;
+
         });
 
-        let currentButton: number = 500;
+        let currentButton: number = 1;
         let buttonAddT = document.querySelectorAll('.new');
         buttonAddT.forEach((button) => {
             button.id = 'buttonProject' + currentButton.toString();
             currentButton++;
-        })
+        });
 
-        // creation d'une tache ---------------------------------------------------------
-        function creatTache() {
-            let z = 0;
-            console.log("hello" + z++);
-            if (detailTache) {
-                let detailCurrent = 0;
-                let detailId = document.querySelectorAll('.detailTache');
-                detailId.forEach((detailId) => {
-                    detailId.id = 'detailId' + detailCurrent.toString();
-                    detailCurrent++;
-                    console.log("2");
-                    console.log(detailId.id + '' + tmpl2);
-                })
+        let currenttache: number = 1;
+        let currentTacheA = document.querySelectorAll('.taches');
+        currentTacheA.forEach((dtl) => {
+            dtl.id = 'tachesList' + currenttache.toString();
+            currenttache++;
+
+            // creation d'une tache ---------------------------------------------------------
+            function creatTache() {
+                if (currentTacheA) {
+                    let detailCurrent = 0;
+                    let detailListe = document.createElement('div');
+                    detailListe.className = 'containTache';
+                    detailListe.innerText = "hello";
+                    document.querySelectorAll('.taches').append(detailListe);
+
+                }
+            }
+            for (let i = 0; i < 50; i++) {
+                if (currentTacheA) {
+                    buttonAddT[i].addEventListener('click', creatTache);
+                }
             }
 
-        }
-        for (let i = 0; i < 50; i++) {
-            if (buttonAddT[i]) {
-                buttonAddT[i].addEventListener('click', creatTache);
-            }
-        }
+        });
+
+
+
+
     }
 }
 

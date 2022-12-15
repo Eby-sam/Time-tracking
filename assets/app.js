@@ -6,13 +6,10 @@ var tmpl = document.getElementById('tmpl');
 var tmpl2 = document.getElementById('tmpl2');
 var divTitle = document.getElementsByClassName('divTitle');
 var detailTache = document.getElementsByClassName('detailTache');
-var news = document.getElementsByClassName('new');
 var containTache = document.getElementsByClassName('containTache');
 var addBut = document.getElementsByClassName('new');
-var containerCreat = document.getElementsByClassName('container');
 var del = document.getElementById('del');
 var container = document.getElementsByClassName('container');
-var resultId = 1;
 // creation d'un projet ---------------------------------------------------------------
 function creatProject() {
     if (tmpl.content) {
@@ -23,32 +20,33 @@ function creatProject() {
             projet.id = 'container' + currentProjet_1.toString();
             currentProjet_1++;
         });
-        var currentButton_1 = 500;
-        var buttonAddT = document.querySelectorAll('.new');
-        buttonAddT.forEach(function (button) {
+        var currentButton_1 = 1;
+        var buttonAddT_1 = document.querySelectorAll('.new');
+        buttonAddT_1.forEach(function (button) {
             button.id = 'buttonProject' + currentButton_1.toString();
             currentButton_1++;
         });
-        // creation d'une tache ---------------------------------------------------------
-        function creatTache() {
-            var z = 0;
-            console.log("hello" + z++);
-            if (detailTache) {
-                var detailCurrent_1 = 0;
-                var detailId = document.querySelectorAll('.detailTache');
-                detailId.forEach(function (detailId) {
-                    detailId.id = 'detailId' + detailCurrent_1.toString();
-                    detailCurrent_1++;
-                    console.log("2");
-                    console.log(detailId.id + '' + tmpl2);
-                });
+        var currenttache_1 = 1;
+        var currentTacheA_1 = document.querySelectorAll('.taches');
+        currentTacheA_1.forEach(function (dtl) {
+            dtl.id = 'tachesList' + currenttache_1.toString();
+            currenttache_1++;
+            // creation d'une tache ---------------------------------------------------------
+            function creatTache() {
+                if (currentTacheA_1) {
+                    var detailCurrent = 0;
+                    var detailListe = document.createElement('div');
+                    detailListe.className = 'containTache';
+                    detailListe.innerText = "hello";
+                    document.querySelectorAll('.taches').append(detailListe);
+                }
             }
-        }
-        for (var i = 0; i < 50; i++) {
-            if (buttonAddT[i]) {
-                buttonAddT[i].addEventListener('click', creatTache);
+            for (var i = 0; i < 50; i++) {
+                if (currentTacheA_1) {
+                    buttonAddT_1[i].addEventListener('click', creatTache);
+                }
             }
-        }
+        });
     }
 }
 but.addEventListener('click', creatProject);

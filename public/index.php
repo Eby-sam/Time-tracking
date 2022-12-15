@@ -33,9 +33,7 @@
                     </div>
                 </div>
                 <div class="taches">
-                    <div class="detailTache">
 
-                    </div>
                 </div>
             </div>
             <div class="barre">
@@ -50,11 +48,7 @@
         </div>
     </template>
 
-    <template id="tmpl2">
-        <div class="containTache">
-            <p>hello new tache</p>
-        </div>
-    </template>
+
 
     <script src="build/js/front-bundle.js"></script>
     <script src="https://kit.fontawesome.com/60b2d3991b.js" crossorigin="anonymous"></script>
