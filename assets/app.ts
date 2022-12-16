@@ -1,3 +1,4 @@
+// recuperation des classes et des ID html --------------------------------------------
 let but = document.getElementById('but') as HTMLElement;
 let hour = document.getElementById('hours') as HTMLElement;
 let days = document.getElementById('days') as HTMLElement;
@@ -5,11 +6,9 @@ let containerTop = document.getElementById('containerTop') as HTMLElement;
 let tmpl = document.getElementById('tmpl') as HTMLElement;
 let tmpl2 = document.getElementById('tmpl2') as HTMLElement;
 let divTitle = document.getElementsByClassName('divTitle') as HTMLCollection;
-let detailTache = document.getElementsByClassName('detailTache') as HTMLCollection;
 let containTache = document.getElementsByClassName('containTache') as HTMLCollection;
 let addBut = document.getElementsByClassName('new') as HTMLCollection;
 let del = document.getElementById('del') as HTMLElement;
-let container = document.getElementsByClassName('container') as HTMLCollection;
 
 
 // creation d'un projet ---------------------------------------------------------------
@@ -48,7 +47,7 @@ function creatProject(this: any, ) {
 
                 }
             }
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 1; i++) {
                 if (currentTacheA) {
                     buttonAddT[i].addEventListener('click', creatTache);
                 }

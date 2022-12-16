@@ -1,3 +1,4 @@
+// recuperation des classes et des ID html --------------------------------------------
 var but = document.getElementById('but');
 var hour = document.getElementById('hours');
 var days = document.getElementById('days');
@@ -5,11 +6,9 @@ var containerTop = document.getElementById('containerTop');
 var tmpl = document.getElementById('tmpl');
 var tmpl2 = document.getElementById('tmpl2');
 var divTitle = document.getElementsByClassName('divTitle');
-var detailTache = document.getElementsByClassName('detailTache');
 var containTache = document.getElementsByClassName('containTache');
 var addBut = document.getElementsByClassName('new');
 var del = document.getElementById('del');
-var container = document.getElementsByClassName('container');
 // creation d'un projet ---------------------------------------------------------------
 function creatProject() {
     if (tmpl.content) {
@@ -41,7 +40,7 @@ function creatProject() {
                     document.querySelectorAll('.taches').append(detailListe);
                 }
             }
-            for (var i = 0; i < 50; i++) {
+            for (var i = 0; i < 1; i++) {
                 if (currentTacheA_1) {
                     buttonAddT_1[i].addEventListener('click', creatTache);
                 }
