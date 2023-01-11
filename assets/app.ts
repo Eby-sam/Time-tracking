@@ -12,15 +12,14 @@ let del = document.getElementById('del') as HTMLElement;
 
 
 // creation d'un projet ---------------------------------------------------------------
-function creatProject(this: any, ) {
-    if (tmpl.content) {
-        containerTop.append(tmpl.content.cloneNode(true))
+function creatProject(this: any) {
+    if (tmpl.content as HTMLCollection) {
+        containerTop.append(tmpl.content.cloneNode(true));
         let currentProjet: number = 1;
         let projects = document.querySelectorAll('.container');
         projects.forEach((projet) => {
             projet.id = 'container' + currentProjet.toString();
             currentProjet++;
-
         });
 
         let currentButton: number = 1;
@@ -35,6 +34,7 @@ function creatProject(this: any, ) {
         currentTacheA.forEach((dtl) => {
             dtl.id = 'tachesList' + currenttache.toString();
             currenttache++;
+
 
             // creation d'une tache ---------------------------------------------------------
             function creatTache() {
@@ -52,16 +52,12 @@ function creatProject(this: any, ) {
                     buttonAddT[i].addEventListener('click', creatTache);
                 }
             }
-
         });
-
-
-
-
     }
 }
 
 but.addEventListener('click', creatProject);
+
 
 
 

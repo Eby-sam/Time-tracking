@@ -1,3 +1,8 @@
+<?php
+    use RedBeanPHP\R;
+    use Eby\project;
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,7 +24,7 @@
     <template id="tmpl">
         <div class="container">
             <div class="divTitle">
-                <h2>Default Project</h2>
+                <h2>hello</h2>
             </div>
             <div class="containerBlock">
                 <div class="time">
